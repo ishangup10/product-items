@@ -1,0 +1,47 @@
+.cardContainer{
+    padding: 20px;
+    width: 200px;
+    height: 250px;
+    border: none;
+    border-radius: 13px;
+    background-color: white;
+    box-shadow: 1px 2px 4px -1px;
+    position: relative;
+}
+
+.image{
+    width: 100% !important;
+    height: 150px;
+}
+
+.title{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+.AddButton{
+    background-color: purple;
+    padding: 7px 20px 7px 20px;
+    position: absolute;
+    bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.AddButton button{
+    border: none;
+    background-color: purple;
+    color: white;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 160px;
+    cursor: pointer;
+}
+
+.price{
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    font-weight: 600;
+    margin: 5px;
+}
