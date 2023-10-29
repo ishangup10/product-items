@@ -14,9 +14,10 @@
 .cartItem{
     background: lightpink;
     top: 0px;
-    width: 300px;
+    width: 400px;
     height: 100vh;
     position: absolute;
     right: 0px;
     padding: 30px;
+    position: fixed;
 }

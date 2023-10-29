@@ -1,12 +1,36 @@
-.container{
-    width: 100%;
+.flexContainer{
+    display: flex;
+    flex-direction: row;
     border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: white ;
 }
 
-.column{
-    width:50%
+.imageFlex{
+    width:33%;
+}
+
+.textFlex{
+    width: 67%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 27px;
 }
 
 .image{
     width: 100%;
+}
+
+.quantity{
+    flex-basis: 100%;
+}
+
+.quantityButton{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
 }

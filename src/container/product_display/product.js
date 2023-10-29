@@ -8,8 +8,7 @@ const Product = () => {
     const[productList, setProductList] = useState([]);
     const[cartList, setCartList] = useState([]);
     const[toggleCart,setToggleCart] = useState(false);
-    const[finalCart,setFinalCart] = useState([]);
-    
+
     useEffect(() => {
         const getProductListData = async() => {
             const resp = await fetch('https://dummyjson.com/products');
@@ -49,6 +48,24 @@ const Product = () => {
         setCartList(tempArr);
     }
 
+    const decreaseQuantity = (e) => {
+        if(e.qty == 1){
+            removeFromCart(e)
+        }else{
+            let tempArr = [...cartList]
+            let finddata = tempArr.find((data) => data.id == e.id)
+            finddata.qty = finddata.qty - 1
+            setCartList(tempArr)
+        }
+    }
+
+    const increaseQuant = (e) => {
+        let tempArr = [...cartList];
+        let dataObj = tempArr.find((data) => data.id == e.id)
+        dataObj.qty = dataObj.qty + 1
+        setCartList(tempArr)
+    }
+
     return(
         <>
         <h1>Welcome to the Electronics Mart</h1>
@@ -74,7 +91,9 @@ const Product = () => {
         {toggleCart ? 
         <div className={styles.cartItem}>
             <CartItem 
-            cartList={cartList} />
+            cartList={cartList}
+            decreaseQuantity={decreaseQuantity}
+            increaseQuant={increaseQuant} />
         </div> : ""}
         </>
     )
